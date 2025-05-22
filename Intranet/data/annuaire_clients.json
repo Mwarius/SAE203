@@ -1,0 +1,362 @@
+[
+  {
+    "id_client": "CLT001",
+    "nom_client": "Famille Le Gall",
+    "telephone": "06 12 34 56 78",
+    "email": "famille.legall@email.com",
+    "adresse": "15 Rue des Mouettes, 29000, Quimper",
+    "projet": "Maison individuelle moderne en béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT002",
+    "nom_client": "M. et Mme Kerjean",
+    "telephone": "07 23 45 67 89",
+    "email": "kerjean.habitat@email.com",
+    "adresse": "2 Impasse des Phares, 29200, Brest",
+    "projet": "Extension de maison existante",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT003",
+    "nom_client": "Société BZH Invest",
+    "telephone": "02 98 12 34 56",
+    "email": "contact@bzihinvest.com",
+    "adresse": "Place de la Liberté, 29900, Concarneau",
+    "projet": "Construction de plusieurs maisons pour lotissement",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT004",
+    "nom_client": "Mlle Dubois",
+    "telephone": "06 34 56 78 90",
+    "email": "dubois.clem@email.com",
+    "adresse": "8 Allée du Muguet, 29600, Morlaix",
+    "projet": "Petite maison compacte en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT005",
+    "nom_client": "Monsieur et Madame Le Goff",
+    "telephone": "07 45 67 89 01",
+    "email": "legoff.maison@email.com",
+    "adresse": "22 Rue des Menhirs, 29120, Pont-l'Abbé",
+    "projet": "Rénovation lourde avec ajout béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT006",
+    "nom_client": "SARL ImmoBreizh",
+    "telephone": "02 98 76 54 32",
+    "email": "contact@immobreizh.fr",
+    "adresse": "5 Avenue Jean Jaurès, 29000, Quimper",
+    "projet": "Construction de maisons mitoyennes en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT007",
+    "nom_client": "Dr. et Dr. Hamon",
+    "telephone": "06 56 78 90 12",
+    "email": "hamon.residence@email.com",
+    "adresse": "10 Rue des Goëlands, 29100, Douarnenez",
+    "projet": "Maison avec vue sur mer en béton architectonique",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT008",
+    "nom_client": "Monsieur Marchand",
+    "telephone": "07 67 89 01 23",
+    "email": "marchand.paul@email.com",
+    "adresse": "3 Chemin de la Côte, 29360, Clohars-Carnoët",
+    "projet": "Garage et dépendance en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT009",
+    "nom_client": "Mme Leroy",
+    "telephone": "06 78 90 12 34",
+    "email": "leroy.anne@email.com",
+    "adresse": "12 Rue des Hortensias, 29800, Landerneau",
+    "projet": "Première acquisition, maison individuelle",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT010",
+    "nom_client": "Entreprise Bâtir Plus",
+    "telephone": "02 98 21 09 87",
+    "email": "contact@batirplus.bzh",
+    "adresse": "Zone Artisanale de Penhoat, 29470, Plougastel-Daoulas",
+    "projet": "Bâtiment industriel avec structure béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT011",
+    "nom_client": "Famille Martin",
+    "telephone": "06 89 01 23 45",
+    "email": "famille.martin@email.com",
+    "adresse": "25 Rue des Coquelicots, 29150, Châteaulin",
+    "projet": "Maison traditionnelle avec soubassement béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT012",
+    "nom_client": "M. et Mme Durand",
+    "telephone": "07 90 12 34 56",
+    "email": "durand.famille@email.com",
+    "adresse": "7 Rue du Stade, 29160, Crozon",
+    "projet": "Maison de vacances en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT013",
+    "nom_client": "SCI Océane",
+    "telephone": "02 98 34 56 78",
+    "email": "sci.oceane@email.com",
+    "adresse": "4 Impasse des Embruns, 29680, Roscoff",
+    "projet": "Construction d'immeuble de 4 appartements",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT014",
+    "nom_client": "Mme Garcia",
+    "telephone": "06 01 23 45 67",
+    "email": "garcia.isabelle@email.com",
+    "adresse": "11 Rue des Genêts, 29400, Landivisiau",
+    "projet": "Rehaussement de toiture en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT015",
+    "nom_client": "Monsieur et Madame Bernard",
+    "telephone": "07 12 34 56 78",
+    "email": "bernard.house@email.com",
+    "adresse": "19 Chemin du Vieux Moulin, 29930, Pont-Aven",
+    "projet": "Maison d'artiste avec atelier en béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT016",
+    "nom_client": "Agence Immobilière Armor",
+    "telephone": "02 98 43 21 09",
+    "email": "contact@immoarmor.com",
+    "adresse": "9 Place Saint-Corentin, 29000, Quimper",
+    "projet": "Rénovation de façades en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT017",
+    "nom_client": "Famille Roux",
+    "telephone": "06 23 45 67 89",
+    "email": "famille.roux@email.com",
+    "adresse": "6 Impasse des Rochers, 29280, Plouzané",
+    "projet": "Maison contemporaine avec piscine en béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT018",
+    "nom_client": "Monsieur Le Bihan",
+    "telephone": "07 34 56 78 90",
+    "email": "lebihan.michel@email.com",
+    "adresse": "33 Rue de la Mer, 29180, Locronan",
+    "projet": "Construction d'un mur de clôture en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT019",
+    "nom_client": "Mme Le Menn",
+    "telephone": "06 45 67 89 01",
+    "email": "lemenn.sophie@email.com",
+    "adresse": "1 Rue des Bruyères, 29490, Guipavas",
+    "projet": "Agrandissement d'une cuisine avec dalle béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT020",
+    "nom_client": "Mr. et Mme Gautier",
+    "telephone": "07 56 78 90 12",
+    "email": "gautier.famille@email.com",
+    "adresse": "14 Allée des Chênes, 29170, Fouesnant",
+    "projet": "Maison de plain-pied en béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT021",
+    "nom_client": "Famille Hamel",
+    "telephone": "06 67 89 01 23",
+    "email": "hamel.construction@email.com",
+    "adresse": "8 Rue du Parc, 29140, Rosporden",
+    "projet": "Maison neuve contemporaine",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT022",
+    "nom_client": "Monsieur et Madame Rouxel",
+    "telephone": "07 78 90 12 34",
+    "email": "rouxel.home@email.com",
+    "adresse": "3 Place de l'Église, 29520, Châteauneuf-du-Faou",
+    "projet": "Extension de salle à manger",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT023",
+    "nom_client": "M. Lefort",
+    "telephone": "06 89 01 23 45",
+    "email": "lefort.renovation@email.com",
+    "adresse": "20 Rue de la Fontaine, 29430, Plouescat",
+    "projet": "Rénovation de toiture et isolation extérieure",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT024",
+    "nom_client": "Famille Nicolas",
+    "telephone": "07 90 12 34 56",
+    "email": "nicolas.project@email.com",
+    "adresse": "1 Boulevard de la Mer, 29740, Lesconil",
+    "projet": "Maison avec sous-sol complet en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT025",
+    "nom_client": "SARL BâtiFinistère",
+    "telephone": "02 98 56 78 90",
+    "email": "contact@batifinistere.com",
+    "adresse": "ZI de Kergaradec, 29200, Brest",
+    "projet": "Construction d'un entrepôt logistique",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT026",
+    "nom_client": "Mme Robert",
+    "telephone": "06 01 23 45 67",
+    "email": "robert.claire@email.com",
+    "adresse": "9 Rue des Écoles, 29790, Pont-Croix",
+    "projet": "Aménagement extérieur en béton décoratif",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT027",
+    "nom_client": "Monsieur et Madame David",
+    "telephone": "07 12 34 56 78",
+    "email": "david.dreamhome@email.com",
+    "adresse": "17 Rue du Calvaire, 29720, Plonéour-Lanvern",
+    "projet": "Maison passive en béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT028",
+    "nom_client": "Famille Simon",
+    "telephone": "06 23 45 67 89",
+    "email": "simon.residence@email.com",
+    "adresse": "4 Impasse des Plages, 29740, Plobannalec-Lesconil",
+    "projet": "Maison sur pilotis en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT029",
+    "nom_client": "M. et Mme Leroy",
+    "telephone": "07 34 56 78 90",
+    "email": "leroy.habitat@email.com",
+    "adresse": "2 Impasse des Jonquilles, 29850, Gouesnou",
+    "projet": "Rénovation de garage en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT030",
+    "nom_client": "SCI Breizh Bat",
+    "telephone": "02 98 65 43 21",
+    "email": "contact@breizhbat.fr",
+    "adresse": "10 Rue des Entrepreneurs, 29700, Pluguffan",
+    "projet": "Construction d'un bâtiment commercial",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT031",
+    "nom_client": "Mme Thomas",
+    "telephone": "06 45 67 89 01",
+    "email": "thomas.marine@email.com",
+    "adresse": "13 Rue des Érables, 29450, Sizun",
+    "projet": "Petite maison de campagne en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT032",
+    "nom_client": "Monsieur et Madame Blanchard",
+    "telephone": "07 56 78 90 12",
+    "email": "blanchard.projet@email.com",
+    "adresse": "21 Rue des Pommiers, 29190, Pleyben",
+    "projet": "Agrandissement d'une maison avec garage intégré",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT033",
+    "nom_client": "Famille Morin",
+    "telephone": "06 67 89 01 23",
+    "email": "morin.family@email.com",
+    "adresse": "5 Chemin du Bord de Mer, 29350, Moëlan-sur-Mer",
+    "projet": "Maison avec toit-terrasse en béton",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT034",
+    "nom_client": "Mr. Dubois",
+    "telephone": "07 78 90 12 34",
+    "email": "dubois.remi@email.com",
+    "adresse": "16 Rue des Artisans, 29830, Ploudalmézeau",
+    "projet": "Dalle béton pour abri de jardin",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT035",
+    "nom_client": "Mme Rousseau",
+    "telephone": "06 89 01 23 45",
+    "email": "rousseau.caroline@email.com",
+    "adresse": "18 Impasse des Roses, 29290, Saint-Renan",
+    "projet": "Rénovation d'une façade en pierre et ajout de béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT036",
+    "nom_client": "Famille Bertrand",
+    "telephone": "07 90 12 34 56",
+    "email": "bertrand.construc@email.com",
+    "adresse": "7 Rue des Chasseurs, 29590, Pont-de-Buis-lès-Quimerch",
+    "projet": "Maison individuelle avec grand garage",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT037",
+    "nom_client": "Monsieur et Madame Gauthier",
+    "telephone": "06 01 23 45 67",
+    "email": "gauthier.home@email.com",
+    "adresse": "24 Rue du Lavoir, 29410, Pleyber-Christ",
+    "projet": "Construction d'une dépendance en béton",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT038",
+    "nom_client": "Mme Brun",
+    "telephone": "07 12 34 56 78",
+    "email": "brun.celine@email.com",
+    "adresse": "11 Rue du Stade, 29780, Plouhinec",
+    "projet": "Création d'une terrasse en béton imprimé",
+    "statut": "Client Actif"
+  },
+  {
+    "id_client": "CLT039",
+    "nom_client": "Famille Boyer",
+    "telephone": "06 23 45 67 89",
+    "email": "boyer.family@email.com",
+    "adresse": "3 Impasse des Oiseaux, 29280, Locmaria-Plouzané",
+    "projet": "Maison à ossature béton et bardage bois",
+    "statut": "Prospect"
+  },
+  {
+    "id_client": "CLT040",
+    "nom_client": "Monsieur et Madame Fontaine",
+    "telephone": "07 34 56 78 90",
+    "email": "fontaine.maison@email.com",
+    "adresse": "1 Boulevard de l'Océan, 29760, Penmarch",
+    "projet": "Maison face à la mer, résistante aux intempéries",
+    "statut": "Client Actif"
+  }
+]

@@ -1,0 +1,27 @@
+[
+{
+    "nom":"Point.P",
+    "logo":"./image/partenaire/logo_pointp.png",
+    "description":""
+},
+{
+    "nom":"Leroy Merlin",
+    "logo":"./image/partenaire/logo_leroy_merlin.jpg",
+    "description":""
+},
+{
+    "nom":"BigMat",
+    "logo":"./image/partenaire/logo_bigmat.jpg",
+    "description":""
+},
+{
+    "nom":"Gedimat",
+    "logo":"./image/partenaire/logo_gedimat.png",
+    "description":""
+},
+{
+    "nom":"La Farge",
+    "logo":"./image/partenaire/logo_lafarge.png",
+    "description":""
+}
+]
