@@ -66,7 +66,7 @@
     "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
     "email": "chloe.bernard@gmgconstruction.com",
     "fonction": "Responsable des Ressources Humaines",
-    "groupe": ["direction"],
+    "groupe": ["managers", "salariés"],
     "photo":"./image/entreprise/chloe_bernard.jpeg"
   },
   {
@@ -96,7 +96,7 @@
     "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
     "email": "antoine.garcia@gmgconstruction.com",
     "fonction": "Directeur Commercial",
-    "groupe": ["direction", "managers"],
+    "groupe": ["direction"],
     "photo":"./image/entreprise/antoine_garcia.jpeg"
   },
   {
@@ -126,7 +126,7 @@
     "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
     "email": "laura.fournier@gmgconstruction.com",
     "fonction": "Responsable Marketing & Communication",
-    "groupe": ["salariés"],
+    "groupe": ["salariés", "managers"],
     "photo":"./image/entreprise/laura_fournier.jpeg"
   },
   {
@@ -216,7 +216,7 @@
     "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
     "email": "olivier.durand@gmgconstruction.com",
     "fonction": "Chef d'Équipe Maçonnerie",
-    "groupe": ["salariés"],
+    "groupe": ["salariés", "managers"],
     "photo":"./image/entreprise/olivier_durand.jpeg"
   },
   {
