@@ -44,8 +44,10 @@ echo "
 <body class='d-flex flex-column min-vh-100'>
 
 <header>
-  <div class='text-center p-5 bg-secondary text-white'>
-    <h1>Connectez-vous à l'intranet de GMG Construction</h1>
+  <div class='jumbotron jumbotron-fluid p-5 bg-primary text-white'>
+    <div class='container'>
+      <h1 class='text-center'>Connectez-vous à l'intranet de GMG Construction</h1>
+    </div>
   </div>
 </header>
 
@@ -66,8 +68,10 @@ echo "
   </div>
 </section>
 
-<footer class='mt-auto p-5 bg-secondary text-dark text-center'>
-  <p>footer</p>
+<footer class='bg-dark text-white text-center py-3'>
+  <div class='container'>
+    <p>&copy; ". date('Y') ." Intranet. Tous droits réservés.</p>
+  </div>
 </footer>
 </body>
 </html>";

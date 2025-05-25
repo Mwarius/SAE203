@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['prenom'])){
+  header("Location:portail_connexion.php");
+}
 echo "<!DOCTYPE html>
 <html lang='fr'>
 <head>
@@ -11,9 +14,6 @@ echo "<!DOCTYPE html>
 </head>
 <body class='d-flex flex-column min-vh-100'>
 <header>
-  <div class='p-5 bg-secondary text-white'>
-    <div><h1 class='text-center'>Bienvenue dans le gestionnaire de fichier</h1></div>
-  </div>
   <div>
     <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
       <div class='container-fluid'>
@@ -44,12 +44,19 @@ echo "<!DOCTYPE html>
       </div>
     </nav>
   </div>
+  <div class='jumbotron jumbotron-fluid p-5 bg-primary text-white'>
+    <div class='container'>
+      <h1 class='text-center'>Bienvenue dans le gestionnaire de fichier</h1>
+    </div>
+  </div>
 </header>
 <section class='flex-grow-1 d-flex justify-content-center align-items-center'>
   <h2>section</h2>
 </section>
-<footer class='mt-auto p-5 bg-secondary text-dark'>
-  <p>footer</p>
+<footer class='bg-dark text-white text-center py-3'>
+  <div class='container'>
+    <p>&copy; ". date('Y') ." Intranet. Tous droits réservés.</p>
+  </div>
 </footer>
 </html>"
 ?>
