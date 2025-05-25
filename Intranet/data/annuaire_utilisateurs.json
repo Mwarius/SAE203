@@ -1,4 +1,24 @@
-[
+[ 
+  {
+    "prenom": "user",
+    "nom": "user",
+    "identifiant": "ususer",
+    "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+    "email": "user.user@gmgconstruction.com",
+    "fonction": "user",
+    "groupe": ["managers","salariés"],
+    "photo":"./image/entreprise/jaqueline_dupond.jpeg"
+  },
+  {
+    "prenom": "admin",
+    "nom": "admin",
+    "identifiant": "adadmin",
+    "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+    "email": "admin.admin@gmgconstruction.com",
+    "fonction": "admin",
+    "groupe": ["direction","admin"],
+    "photo":"./image/entreprise/jaqueline_dupond.jpeg"
+  },
   {
     "prenom": "Jaqueline",
     "nom": "Dupond",
