@@ -53,7 +53,9 @@ echo "<!DOCTYPE html>
   </div>
 </header>
 <section class='flex-grow-1 d-flex justify-content-center align-items-center'>
-  <h2>section</h2>
+  <h2><div class='card'>
+  <div class='card-body'>Basic card</div>
+</div></h2>
 </section>
 <footer class='bg-dark text-white text-center py-3'>
   <div class='container'>
