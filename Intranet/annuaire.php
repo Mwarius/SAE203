@@ -53,9 +53,30 @@ echo "<!DOCTYPE html>
   </div>
 </header>
 <section class='flex-grow-1 d-flex justify-content-center align-items-center'>
-  <h2><div class='card'>
-  <div class='card-body'>Basic card</div>
-</div></h2>
+  <table>";
+  $compteurTable = 1;
+  $jsonUser = json_decode(file_get_contents("data\annuaire_utilisateurs.json"));
+  for ($i=0; $i < sizeof($jsonUser); $i++){
+    if ($compteurTable == 1){
+      echo "<tr>";
+    };
+    $userActuel = (array)($jsonUser[$i]);
+    echo "<td>
+            <div class='card'>
+              <div class='card-header'><h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
+              <div class='card-body'><img src=".$userActuel["photo"]." alt='User $i' style='height: 200px'><p> ".$userActuel['description']." </p>
+              <div class='card-footer text-secondary'><p> ".$userActuel["fonction"]." </p>
+          </td>";
+    if ($compteurTable == 3){
+      echo "</tr>";
+      $compteurTable = 1;
+    }
+    else{
+      $compteurTable+= 1;
+    }
+    
+  }
+echo "</table>
 </section>
 <footer class='bg-dark text-white text-center py-3'>
   <div class='container'>
