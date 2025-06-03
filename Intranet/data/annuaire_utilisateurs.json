@@ -8,9 +8,10 @@
         "fonction": "user",
         "groupe": [
             "managers",
-            "salari\u00e9s"
+            "salaries"
         ],
-        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg"
+        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "admin",
@@ -23,7 +24,8 @@
             "direction",
             "admin"
         ],
-        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg"
+        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Jaqueline",
@@ -35,7 +37,8 @@
         "groupe": [
             "direction"
         ],
-        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg"
+        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Louis",
@@ -48,7 +51,8 @@
             "salari\u00e9s",
             "admin"
         ],
-        "photo": ".\/img\/entreprise\/louis_dupont.jpeg"
+        "photo": ".\/img\/entreprise\/louis_dupont.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Louise",
@@ -61,7 +65,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/louise_durand.jpeg"
+        "photo": ".\/img\/entreprise\/louise_durand.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Marc",
@@ -73,7 +78,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/marc_lebevre.jpeg"
+        "photo": ".\/img\/entreprise\/marc_lefebvre.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Sophie",
@@ -86,7 +92,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/sophie_dubois.jpeg"
+        "photo": ".\/img\/entreprise\/sophie_dubois.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Pierre",
@@ -98,7 +105,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/pierre_martin.jpeg"
+        "photo": ".\/img\/entreprise\/pierre_martin.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Chlo\u00e9",
@@ -111,7 +119,8 @@
             "managers",
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/chloe_bernard.jpeg"
+        "photo": ".\/img\/entreprise\/chloe_bernard.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Thomas",
@@ -123,7 +132,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/thomas_petit.jpeg"
+        "photo": ".\/img\/entreprise\/thomas_petit.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Manon",
@@ -135,7 +145,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/manon_roux.jpeg"
+        "photo": ".\/img\/entreprise\/manon_roux.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Antoine",
@@ -147,7 +158,8 @@
         "groupe": [
             "direction"
         ],
-        "photo": ".\/img\/entreprise\/antoine_garcia.jpeg"
+        "photo": ".\/img\/entreprise\/antoine_garcia.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Camille",
@@ -159,7 +171,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/camille_david.jpeg"
+        "photo": ".\/img\/entreprise\/camille_david.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Nicolas",
@@ -172,7 +185,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/nicolas_moreau.jpeg"
+        "photo": ".\/img\/entreprise\/nicolas_moreau.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Laura",
@@ -185,7 +199,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/laura_fournier.jpeg"
+        "photo": ".\/img\/entreprise\/laura_fournier.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Romain",
@@ -198,7 +213,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/romain_leroy.jpeg"
+        "photo": ".\/img\/entreprise\/romain_leroy.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Clara",
@@ -210,7 +226,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/clara_lambert.jpeg"
+        "photo": ".\/img\/entreprise\/clara_lambert.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Alexandre",
@@ -222,7 +239,8 @@
         "groupe": [
             "direction"
         ],
-        "photo": ".\/img\/entreprise\/alexandre_dupuis.jpeg"
+        "photo": ".\/img\/entreprise\/alexandre_dupuis.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Elodie",
@@ -234,7 +252,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/elodie_bonnet.jpeg"
+        "photo": ".\/img\/entreprise\/elodie_bonnet.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Julien",
@@ -246,7 +265,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/julien_girard.jpeg"
+        "photo": ".\/img\/entreprise\/julien_girard.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Fanny",
@@ -259,7 +279,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/fanny_roger.jpeg"
+        "photo": ".\/img\/entreprise\/fanny_roger.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Vincent",
@@ -271,7 +292,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/vincent_andre.jpeg"
+        "photo": ".\/img\/entreprise\/vincent_andre.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Mathilde",
@@ -284,7 +306,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/mathilde_jacquet.jpeg"
+        "photo": ".\/img\/entreprise\/mathilde_jacquet.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Olivier",
@@ -297,7 +320,8 @@
             "salari\u00e9s",
             "managers"
         ],
-        "photo": ".\/img\/entreprise\/olivier_durand.jpeg"
+        "photo": ".\/img\/entreprise\/olivier_durand.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "L\u00e9a",
@@ -309,7 +333,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/lea_morel.jpeg"
+        "photo": ".\/img\/entreprise\/lea_morel.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Kevin",
@@ -321,7 +346,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/kevin_dubois.jpeg"
+        "photo": ".\/img\/entreprise\/kevin_dubois.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Fatima",
@@ -333,7 +359,8 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/fatima_benali.jpeg"
+        "photo": ".\/img\/entreprise\/fatima_benali.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
         "prenom": "Jos\u00e9",
@@ -345,6 +372,7 @@
         "groupe": [
             "salari\u00e9s"
         ],
-        "photo": ".\/img\/entreprise\/jose_ramos"
+        "photo": ".\/img\/entreprise\/jose_ramos.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     }
 ]
