@@ -96,7 +96,7 @@ echo "<!DOCTYPE html>
         <tr>
           <td>Stack Overflow</td>
           <td><a href='https://stackoverflow.com' target='_blank'>stackoverflow.com</a></td>
-          <td>Site d’entraide pour développeurs utilisé pour résoudre des problèmes de code, trouver des exemples ou comprendre des erreurs.</td>
+          <td>Site d’entraide pour développeurs utilisé pour résoudre des problèmes de code, trouver des exemples ou comprendre des erreurs.</td> // ajoutez doc apache https://httpd.apache.org/
         </tr>
       </tbody>
     </table>
@@ -111,3 +111,4 @@ echo "<!DOCTYPE html>
 </body>
 </html>";
 ?>
+
