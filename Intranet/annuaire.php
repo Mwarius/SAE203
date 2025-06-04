@@ -89,7 +89,7 @@ if (isset($_POST['utilisateurs'])){
     }
   echo "</table>";
 }
-if (isset($_POST['partenaires'])){
+elseif (isset($_POST['partenaires'])){
   echo "<table>";
   $compteurTable = 1;
   $jsonPart = json_decode(file_get_contents("data\annuaire_partenaire.json"));
@@ -113,7 +113,7 @@ if (isset($_POST['partenaires'])){
     }
   echo "</table>";
 }
-if (isset($_POST['clients'])){
+elseif (isset($_POST['clients'])){
   echo "<table>";
   $compteurTable = 1;
   $jsonClient = json_decode(file_get_contents("data\annuaire_clients.json"));
@@ -128,6 +128,31 @@ if (isset($_POST['clients'])){
         <div class='card-body'><p>".$clientActuel["telephone"]."<br>".$clientActuel["email"]."<br>".$clientActuel["adresse"]."<br>".$clientActuel["statut"]."<br>".$clientActuel['id_client']."</p>
       </td>";
       if ($compteurTable == 4){
+        echo "</tr>";
+        $compteurTable = 1;
+      }
+      else{
+        $compteurTable+= 1;
+      }
+    }
+  echo "</table>";
+}
+else{
+  echo "<table>";
+  $compteurTable = 1;
+  $jsonUser = json_decode(file_get_contents("data\annuaire_utilisateurs.json"));
+    for ($i=0; $i < sizeof($jsonUser); $i++){
+      if ($compteurTable == 1){
+        echo "<tr>";
+      };
+      $userActuel = (array)($jsonUser[$i]);
+      echo "<td>
+        <div class='card border-black' style='border-radius: 10px;height:500px'>
+        <div class='card-header bg-primary text-white' style='border-radius: 8px'><h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
+        <div class='card-body'><img src=".$userActuel["photo"]." alt='User $i' style='width: 350px'><p> ".$userActuel['description']." </p>
+        <div class='card-footer text-secondary'><p> ".$userActuel["fonction"]." </p>
+      </td>";
+      if ($compteurTable == 3){
         echo "</tr>";
         $compteurTable = 1;
       }
