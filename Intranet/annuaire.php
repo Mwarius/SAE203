@@ -52,32 +52,93 @@ echo "<!DOCTYPE html>
     </div>
   </div>
 </header>
-<section class='flex-grow-1 d-flex justify-content-center align-items-center'>
-  <table>";
+<form method='post'>
+  <table align='center'>
+    <tr>
+      <td><input type='submit' name='utilisateurs' class='border-primary text-primary bg-white' value='Utilisateurs'><td>
+      <td><input type='submit' name='partenaires' class='border-primary text-primary bg-white' value='Partenaires'><td>
+      <td><input type='submit' name='clients' class='border-primary text-primary bg-white' value='Clients'><td>
+    </tr>
+  </table>
+</form>;
+<section class='flex-grow-1 d-flex justify-content-center align-items-center'>";
+  
+
+if (isset($_POST['utilisateurs'])){
+  echo "<table>";
   $compteurTable = 1;
   $jsonUser = json_decode(file_get_contents("data\annuaire_utilisateurs.json"));
-  for ($i=0; $i < sizeof($jsonUser); $i++){
-    if ($compteurTable == 1){
-      echo "<tr>";
-    };
-    $userActuel = (array)($jsonUser[$i]);
-    echo "<td>
-            <div class='card'>
-              <div class='card-header'><h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
-              <div class='card-body'><img src=".$userActuel["photo"]." alt='User $i' style='height: 200px'><p> ".$userActuel['description']." </p>
-              <div class='card-footer text-secondary'><p> ".$userActuel["fonction"]." </p>
-          </td>";
-    if ($compteurTable == 3){
-      echo "</tr>";
-      $compteurTable = 1;
+    for ($i=0; $i < sizeof($jsonUser); $i++){
+      if ($compteurTable == 1){
+        echo "<tr>";
+      };
+      $userActuel = (array)($jsonUser[$i]);
+      echo "<td>
+        <div class='card border-black' style='border-radius: 10px;height:500px'>
+        <div class='card-header bg-primary text-white' style='border-radius: 8px'><h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
+        <div class='card-body'><img src=".$userActuel["photo"]." alt='User $i' style='width: 350px'><p> ".$userActuel['description']." </p>
+        <div class='card-footer text-secondary'><p> ".$userActuel["fonction"]." </p>
+      </td>";
+      if ($compteurTable == 3){
+        echo "</tr>";
+        $compteurTable = 1;
+      }
+      else{
+        $compteurTable+= 1;
+      }
     }
-    else{
-      $compteurTable+= 1;
+  echo "</table>";
+}
+if (isset($_POST['partenaires'])){
+  echo "<table>";
+  $compteurTable = 1;
+  $jsonPart = json_decode(file_get_contents("data\annuaire_partenaire.json"));
+    for ($i=0; $i < sizeof($jsonPart); $i++){
+      if ($compteurTable == 1){
+        echo "<tr>";
+      };
+      $partActuel = (array)($jsonPart[$i]);
+      echo "<td>
+        <div class='card border-black' style='border-radius: 10px; height: 500px'>
+        <div class='card-header bg-primary text-white' style='border-radius: 8px'><h1> ".$partActuel["nom"]." </h1></div>
+        <div class='card-body'><img src=".$partActuel["logo"]." alt='Partenaire $i' style='width: 350px'><p> ".$partActuel['description']." </p>
+      </td>";
+      if ($compteurTable == 3){
+        echo "</tr>";
+        $compteurTable = 1;
+      }
+      else{
+        $compteurTable+= 1;
+      }
     }
-    
-  }
-echo "</table>
-</section>
+  echo "</table>";
+}
+if (isset($_POST['clients'])){
+  echo "<table>";
+  $compteurTable = 1;
+  $jsonClient = json_decode(file_get_contents("data\annuaire_clients.json"));
+    for ($i=0; $i < sizeof($jsonClient); $i++){
+      if ($compteurTable == 1){
+        echo "<tr>";
+      };
+      $clientActuel = (array)($jsonClient[$i]);
+      echo "<td>
+        <div class='card border-black' style='border-radius: 10px;height:300px'>
+        <div class='card-header bg-primary text-white' style='border-radius: 8px'><h3> ".$clientActuel["nom_client"]."<br>".$clientActuel["projet"]." </h3></div>
+        <div class='card-body'><p>".$clientActuel["telephone"]."<br>".$clientActuel["email"]."<br>".$clientActuel["adresse"]."<br>".$clientActuel["statut"]."<br>".$clientActuel['id_client']."</p>
+      </td>";
+      if ($compteurTable == 4){
+        echo "</tr>";
+        $compteurTable = 1;
+      }
+      else{
+        $compteurTable+= 1;
+      }
+    }
+  echo "</table>";
+}
+
+echo "</section>
 <footer class='bg-dark text-white text-center py-3'>
   <div class='container'>
     <p>&copy; ". date('Y') ." Intranet. Tous droits réservés.</p>
