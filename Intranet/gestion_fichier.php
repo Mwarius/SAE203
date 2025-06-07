@@ -1,50 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['prenom'])){
-  header("Location:portail_connexion.php");
-}
-echo "<!DOCTYPE html>
-<html lang='fr'>
-<head>
-  <title>INTRANET</title>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
-  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
-</head>
-<body class='d-flex flex-column min-vh-100'>
-<header>
-  <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-    <div class='container-fluid'>
-      <a class='navbar-brand' href='./accueil_intranet.php'>GMG</a>
-      <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav'>
-        <span class='navbar-toggler-icon'></span>
-      </button>
-      <div class='collapse navbar-collapse' id='navbarNav'>
-        <ul class='navbar-nav me-auto'>
-          <li class='nav-item'>
-            <a class='nav-link text-light' href='./annuaire.php'>Annuaire</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link text-light' href='./gestion_fichier.php'>Gestion fichier</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link text-light' href='./wiki.php'>Wiki</a>
-          </li>
-          <li>
-            <a class='nav-link text-light' href='./profil.php'>Mon profil</a>
-          </li>
-        </ul>
-        <div class='d-flex align-items-center'>";
-          if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['groupe'])) {
-            echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) ." ". htmlspecialchars($_SESSION['nom']) .", ". implode(", ", $_SESSION['groupe']) ."</span>";
-            echo "<a href='./portail_deconnexion.php' class='btn btn-outline-light btn-sm'>Se déconnecter</a>";
-          }
-          echo "
-        </div>
-      </div>
-    </div>
-  </nav>
+include './scripts/fonction.php';
+page_load();
+?>
   <div class='jumbotron jumbotron-fluid p-5 bg-primary text-white'>
     <div class='container'>
       <h1 class='text-center'>Bienvenue dans le gestionnaire de fichier</h1>
@@ -52,12 +9,58 @@ echo "<!DOCTYPE html>
   </div>
 </header>
 <section class='flex-grow-1 d-flex justify-content-center align-items-center'>
-  <h2>section</h2>
+<div class="container py-5">
+        <h1 class="mb-4 text-center">📁 Gestionnaire de fichiers</h1>
+
+        <!-- Formulaire d'upload -->
+        <div class="card mb-5 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Uploader un fichier</h5>
+                <form action="./scripts/upload.php" method="post" enctype="multipart/form-data" class="row g-3">
+                    <div class="col-md-8">
+                        <input type="file" name="fileToUpload" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary w-100">Uploader</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Liste des fichiers disponibles -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📂 Fichiers disponibles</h5>
+                <ul class="list-group">
+                    <?php
+                    $files = scandir("Storage");
+                    $isAdmin = isset($_SESSION['groupe']) && in_array("admin", $_SESSION['groupe']);
+
+                    foreach ($files as $file) {
+                        if ($file != "." && $file != "..") {
+                            echo '<li class="list-group-item d-flex justify-content-between align-items-center">';
+                            echo '<div>' . htmlspecialchars($file) . '</div>';
+                            echo '<div>';
+                            echo '<a href="./scripts/download.php?file=' . urlencode($file) . '" class="btn btn-sm btn-outline-success me-2">Télécharger</a>';
+
+                            if ($isAdmin) {
+                                echo '<form action="./scripts/delete.php" method="post" class="d-inline" onsubmit="return confirm(\'Supprimer ce fichier ?\');">';
+                                echo '<input type="hidden" name="fileToDelete" value="' . htmlspecialchars($file) . '">';
+                                echo '<button type="submit" class="btn btn-sm btn-outline-danger">Supprimer</button>';
+                                echo '</form>';
+                            }
+
+                            echo '</div>';
+                            echo '</li>';
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
-<footer class='bg-dark text-white text-center py-3'>
-  <div class='container'>
-    <p>&copy; ". date('Y') ." Intranet. Tous droits réservés.</p>
-  </div>
-</footer>
-</html>"
+
+<?php
+piedPage();
 ?>
