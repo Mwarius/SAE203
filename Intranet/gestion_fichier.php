@@ -46,12 +46,8 @@ page_load();
                                     $autoriseVoir = $isAdmin || !$estDossierRestreint || in_array($dossier, $groupesUtilisateur);
                                 
                                     if (!$autoriseVoir) continue; // Si l'utilisateur n'est pas autorisé à voir ce dossier, on passe au suivant.
-                                
-                                    // Marque le dossier "transfert" comme sélectionné par défaut.
-                                    $selected = ($dossier === 'transfert') ? 'selected' : '';
-                                
-                                    // Affiche une option dans le <select> avec le nom du dossier (échappé pour la sécurité HTML).
-                                    echo "<option value=\"" . htmlspecialchars($dossier) . "\" $selected>" . htmlspecialchars($dossier) . "</option>";
+                                    // Affiche une option dans le <select> avec le nom du dossier.
+                                    echo "<option value=\"" . htmlspecialchars($dossier) . "\" >" . htmlspecialchars($dossier) . "</option>";
                                 }
                                 ?>
                             </select>
