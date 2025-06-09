@@ -58,3 +58,73 @@ function piedPage(){
     </footer>
     </html>";
 }
+
+function afficherFichiers($chemin, $prefix = '') {
+    global $isAdmin;
+
+    $groupesUtilisateur = $_SESSION['groupe'] ?? [];
+    $elements = scandir($chemin);
+    echo '<ul class="list-group list-group-flush">';
+
+    foreach ($elements as $element) {
+        if ($element === '.' || $element === '..') continue;
+
+        // Vérification des dossiers restreints
+        $estDossierRestreint = in_array($element, ['direction', 'managers']);
+        $autoriseVoir = $isAdmin || !$estDossierRestreint || in_array($element, $groupesUtilisateur);
+
+        if (!$autoriseVoir) continue;
+
+        $cheminComplet = $chemin . '/' . $element;
+        $cheminRelatif = ltrim($cheminComplet, './'); // Pour enlever le ./ du nom
+
+        if (is_dir($cheminComplet)) {
+            $collapseId = md5($cheminComplet); // transforme le chemin en id unique avec un hashage md5 (connaitre le hashage md5 en CTF, c'est utile)
+            $encodedFolder = urlencode($cheminRelatif);
+
+            echo "
+            <li class='list-group-item'>
+                <div class='d-flex justify-content-between align-items-center'>
+                    <a class='link-offset-2 link-underline link-underline-opacity-0' data-bs-toggle='collapse' href='#collapse$collapseId' role='button' aria-expanded='false' aria-controls='collapse$collapseId'>
+                        📁 " . htmlspecialchars($element) . "
+                    </a>
+                    <div class='btn-group btn-group-sm'>
+                        <a href='./scripts/download_zip.php?folder={$encodedFolder}' class='btn btn-outline-secondary m-1'>📦 ZIP</a>";
+
+            if ($isAdmin) {
+                echo "
+                        <form action='./scripts/delete.php' method='post' class='d-inline' onsubmit='return confirm(\"Supprimer ce dossier et tout son contenu ?\");'>
+                            <input type='hidden' name='fileToDelete' value='" . htmlspecialchars($cheminRelatif) . "'>
+                            <button type='submit' class='btn btn-outline-danger m-1'>🗑️</button>
+                        </form>";
+            }
+
+            echo "      </div>
+                </div>
+                <div class='collapse mt-2 ms-3' id='collapse$collapseId'>";
+                    afficherFichiers($cheminComplet, $prefix . $element . '/');
+            echo "  </div>
+            </li>";
+        } else {
+            echo "
+            <li class='list-group-item d-flex justify-content-between align-items-center'>
+                <div>📄 " . htmlspecialchars($element) . "</div>
+                <div class='btn-group btn-group-sm'>
+                    <a href='./scripts/download.php?file=" . urlencode($cheminRelatif) . "' class='btn btn-outline-success m-1'>Télécharger</a>";
+
+            if ($isAdmin) {
+                echo "
+                    <form action='./scripts/delete.php' method='post' class='d-inline' onsubmit='return confirm(\"Supprimer ce fichier ?\");'>
+                        <input type='hidden' name='fileToDelete' value='" . htmlspecialchars($cheminRelatif) . "'>
+                        <button type='submit' class='btn btn-outline-danger m-1'>🗑️</button>
+                    </form>";
+            }
+
+            echo "
+                </div>
+            </li>";
+        }
+    }
+
+    echo '</ul>';
+}
