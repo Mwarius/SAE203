@@ -72,7 +72,7 @@ echo "<!DOCTYPE html>
 if (isset($_POST['utilisateurs'])){
   echo "<table>";
   $compteurTable = 1;
-  $jsonUser = json_decode(file_get_contents("data\annuaire_utilisateurs.json"));
+  $jsonUser = json_decode(file_get_contents("data/annuaire_utilisateurs.json"));
     for ($i=0; $i < sizeof($jsonUser); $i++){
       if ($compteurTable == 1){
         echo "<tr>";
@@ -97,7 +97,7 @@ if (isset($_POST['utilisateurs'])){
 elseif (isset($_POST['partenaires'])){
   echo "<table>";
   $compteurTable = 1;
-  $jsonPart = json_decode(file_get_contents("data\annuaire_partenaire.json"));
+  $jsonPart = json_decode(file_get_contents("data/annuaire_partenaire.json"));
     for ($i=0; $i < sizeof($jsonPart); $i++){
       if ($compteurTable == 1){
         echo "<tr>";
@@ -121,7 +121,7 @@ elseif (isset($_POST['partenaires'])){
 elseif (isset($_POST['clients'])){
   echo "<table>";
   $compteurTable = 1;
-  $jsonClient = json_decode(file_get_contents("data\annuaire_clients.json"));
+  $jsonClient = json_decode(file_get_contents("data/annuaire_clients.json"));
     for ($i=0; $i < sizeof($jsonClient); $i++){
       if ($compteurTable == 1){
         echo "<tr>";
@@ -145,7 +145,7 @@ elseif (isset($_POST['clients'])){
 else{
   echo "<table>";
   $compteurTable = 1;
-  $jsonUser = json_decode(file_get_contents("data\annuaire_utilisateurs.json"));
+  $jsonUser = json_decode(file_get_contents("data/annuaire_utilisateurs.json"));
     for ($i=0; $i < sizeof($jsonUser); $i++){
       if ($compteurTable == 1){
         echo "<tr>";
