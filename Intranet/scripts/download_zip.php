@@ -47,3 +47,4 @@ header('Content-Length: ' . filesize($tmpZip));
 readfile($tmpZip);
 unlink($tmpZip);
 exit;
+?>
