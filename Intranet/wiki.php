@@ -35,8 +35,8 @@ echo "<!DOCTYPE html>
             </li>
           </ul>
           <div class='d-flex align-items-center'>";
-            if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['groupe'])) {
-              echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) ." ". htmlspecialchars($_SESSION['nom']) .", ". implode(', ', $_SESSION['groupe']) ."</span>";
+            if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+              echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) ." ". htmlspecialchars($_SESSION['nom']) .", ". htmlspecialchars($_SESSION['fonction']) ."</span>";
               echo "<a href='./portail_deconnexion.php' class='btn btn-outline-light btn-sm'>Se déconnecter</a>";
             }
           echo "</div>
