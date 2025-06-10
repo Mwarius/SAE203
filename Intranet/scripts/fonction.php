@@ -128,3 +128,4 @@ function afficherFichiers($chemin, $prefix = '') {
 
     echo '</ul>';
 }
+?>
