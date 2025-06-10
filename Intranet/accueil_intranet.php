@@ -7,7 +7,7 @@ if (!isset($_SESSION['prenom'])){
 echo "<!DOCTYPE html>
 <html lang='fr'>
 <head>
-	<title>INTRANET</title>
+  <title>INTRANET</title>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
@@ -37,8 +37,8 @@ echo "<!DOCTYPE html>
           </li>
         </ul>
         <div class='d-flex align-items-center'>";
-          if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['groupe'])) {
-            echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) ." ". htmlspecialchars($_SESSION['nom']) .", ". implode(", ", $_SESSION['groupe']) ."</span>";
+          if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+            echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) ." ". htmlspecialchars($_SESSION['nom']) .", ". htmlspecialchars($_SESSION['fonction']) ."</span>";
             echo "<a href='./portail_deconnexion.php' class='btn btn-outline-light btn-sm'>Se déconnecter</a>";
           }
           echo "
