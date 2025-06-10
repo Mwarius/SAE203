@@ -6,29 +6,23 @@ if (!isset($_SESSION['identifiant'])) {
     header("Location: portail_connexion.php");
     exit();
 }
+$fichier = "./data/annuaire_utilisateurs.json";
+$contenu = file_get_contents($fichier);
+$utilisateurs = json_decode($contenu, true);
 
-$fichier_utilisateurs = "./data/annuaire_utilisateurs.json";
-$utilisateurs = [];
-
-$contenu_fichier = file_get_contents($fichier_utilisateurs);
-$utilisateurs = json_decode($contenu_fichier, true);
-
-$identifiant_actuel = $_SESSION['identifiant'];
-$index_utilisateur = -1;
-
-for ($i = 0; $i < count($utilisateurs); $i++) {
-    if ($utilisateurs[$i]['identifiant'] == $identifiant_actuel) {
-        $index_utilisateur = $i;
+// trouve l'utilisateur qui est connecté
+$identifiant = $_SESSION['identifiant'];
+$utilisateur = null;
+foreach ($utilisateurs as $i => $u) {
+    if ($u['identifiant'] == $identifiant) {
+        $utilisateur = $u;
+        $index = $i;
         break;
     }
 }
 
-$utilisateur = ['prenom' => '','nom' => '','identifiant' => '','email' => '','fonction' => '','groupe' => [],'photo' => ''];
-
-if ($index_utilisateur >= 0) {
-    $utilisateur = $utilisateurs[$index_utilisateur];
-
-    // Ajout des données dans $_SESSION
+// stock certaines infos de sessions
+if ($utilisateur) {
     $_SESSION['prenom'] = $utilisateur['prenom'];
     $_SESSION['nom'] = $utilisateur['nom'];
     $_SESSION['fonction'] = $utilisateur['fonction'];
@@ -37,43 +31,42 @@ if ($index_utilisateur >= 0) {
 $message = "";
 
 // Traitement du formulaire
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && $index_utilisateur >= 0) {
-    $email_saisi = $_POST['email'];
-    $motdepasse1 = $_POST['new_password'];
-    $motdepasse2 = $_POST['confirm_password'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $utilisateur) {
+    $desc = $_POST['description'];
+    $mdp1 = $_POST['new_mdp'];
+    $mdp2 = $_POST['confirm_mdp'];
 
-    if ($motdepasse1 != "" && $motdepasse1 != $motdepasse2) {
+    if (!empty($mdp1) && $mdp1 != $mdp2) {
         $message = "<div class='alert alert-danger text-center'>Les mots de passe ne correspondent pas.</div>";
     } else {
-        if ($motdepasse1 != "") {
-            $utilisateurs[$index_utilisateur]['motdepasse'] = password_hash($motdepasse1, PASSWORD_DEFAULT);
+        // modifie le mot de passe si un mot de passe à été rentrer
+        if (!empty($mdp1)) {
+            $utilisateurs[$index]['motdepasse'] = password_hash($mdp1, PASSWORD_DEFAULT);
         }
+        
+        $utilisateurs[$index]['description'] = $description; // mets à jour la description
 
-        $utilisateurs[$index_utilisateur]['email'] = filter_var($email_saisi, FILTER_SANITIZE_EMAIL);
-
-        $fichier_modifier = file_put_contents($fichier_utilisateurs, json_encode($utilisateurs, JSON_PRETTY_PRINT));
-
-        if ($fichier_modifier) {
+        // sauvegarde les informations dans le fichier
+        if (file_put_contents($fichier, json_encode($utilisateurs, JSON_PRETTY_PRINT))) {
             $message = "<div class='alert alert-success text-center'>Profil mis à jour avec succès.</div>";
         } else {
             $message = "<div class='alert alert-danger text-center'>Erreur lors de la mise à jour du profil.</div>";
         }
+
+        // mets à jour les informations
+        $utilisateur = $utilisateurs[$index];
     }
 }
 
 // Préparer les données d'affichage
-$photo = './image/utilisateur_par_defaut.png';
-if (!empty($utilisateur['photo'])) {
-    $photo = htmlspecialchars($utilisateur['photo']);
-}
-
+$photo = htmlspecialchars($utilisateur['photo']);
 $prenom = htmlspecialchars($utilisateur['prenom']);
 $nom = htmlspecialchars($utilisateur['nom']);
 $identifiant = htmlspecialchars($utilisateur['identifiant']);
 $email = htmlspecialchars($utilisateur['email']);
 $fonction = htmlspecialchars($utilisateur['fonction']);
 $groupes = implode(', ', $utilisateur['groupe']);
-$description = isset($utilisateur['description']) ? htmlspecialchars($utilisateur['description']) : '';
+$description = htmlspecialchars($utilisateur['description'] ?? '');
 $annee = date("Y");
 
 echo "
@@ -139,15 +132,15 @@ echo "
           <p><strong>Email :</strong> $email</p>
           <div class='mb-3'>
             <label for='description' class='form-label'>Description :</label>
-            <textarea type='description' class='form-control' id='description' name='description' rows='5' value='$description'></textarea>
+            <textarea type='description' class='form-control' id='description' name='description' rows='5'>$description</textarea>
           </div>
           <div class='mb-3'>
-            <label for='new_password' class='form-label'>Nouveau mot de passe :</label>
-            <input type='password' class='form-control' id='new_password' name='new_password'>
+            <label for='new_mdp' class='form-label'>Nouveau mot de passe :</label>
+            <input type='password' class='form-control' id='new_mdp' name='new_mdp'>
           </div>
           <div class='mb-3'>
-            <label for='confirm_password' class='form-label'>Confirmer le mot de passe :</label>
-            <input type='password' class='form-control' id='confirm_password' name='confirm_password'>
+            <label for='confirm_mdp' class='form-label'>Confirmer le mot de passe :</label>
+            <input type='password' class='form-control' id='confirm_mdp' name='confirm_mdp'>
           </div>
           <p><strong>Fonction :</strong> $fonction</p>
           <p><strong>Groupes :</strong> $groupes</p>
