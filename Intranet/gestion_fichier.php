@@ -45,9 +45,9 @@ page_load();
                                     // - OU il appartient au groupe correspondant au nom du dossier
                                     $autoriseVoir = $isAdmin || !$estDossierRestreint || in_array($dossier, $groupesUtilisateur);
                                 
-                                    if (!$autoriseVoir) continue; // Si l'utilisateur n'est pas autorisé à voir ce dossier, on passe au suivant.
-                                    // Affiche une option dans le <select> avec le nom du dossier.
-                                    echo "<option value=\"" . htmlspecialchars($dossier) . "\" >" . htmlspecialchars($dossier) . "</option>";
+                                    if (!$autoriseVoir) continue; // Si l'utilisateur n'est pas autorisé à voir ce dossier, on passe au suivant.     
+                                    // Affiche une option dans le <select> avec le nom du dossier (échappé pour la sécurité HTML).
+                                    echo "<option value=\"" . htmlspecialchars($dossier) . "\" $selected>" . htmlspecialchars($dossier) . "</option>";
                                 }
                                 ?>
                             </select>
