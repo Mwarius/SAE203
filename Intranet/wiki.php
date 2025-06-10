@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION['prenom'])) {
+/*if (!isset($_SESSION['prenom'])) {
   header("Location:portail_connexion.php");
   exit;
-}
+}*/
 if ($utilisateur) {
     $_SESSION['prenom'] = $utilisateur['prenom'];
     $_SESSION['nom'] = $utilisateur['nom'];
