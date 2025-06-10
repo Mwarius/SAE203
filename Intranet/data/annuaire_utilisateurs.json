@@ -1,43 +1,46 @@
 [
     {
-        "prenom": "user",
-        "nom": "user",
-        "identifiant": "ususer",
-        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
-        "email": "user.user@gmgconstruction.com",
-        "fonction": "user",
-        "groupe": [
-            "managers",
-            "salaries"
-        ],
-        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg",
-        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
-    },
-    {
-        "prenom": "admin",
-        "nom": "admin",
-        "identifiant": "adadmin",
-        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
-        "email": "admin.admin@gmgconstruction.com",
-        "fonction": "admin",
-        "groupe": [
-            "direction",
-            "admin"
-        ],
-        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg",
-        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
-    },
-    {
         "prenom": "Jaqueline",
         "nom": "Dupond",
         "identifiant": "jadupond",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "jaqueline.dupond@gmgconstruction.com",
-        "fonction": "Directeur G\u00e9n\u00e9rale",
-        "groupe": [
-            "direction"
-        ],
-        "photo": ".\/img\/entreprise\/jaqueline_dupond.jpeg",
+        "fonction": "Directeur Générale",
+        "groupe": ["direction"],
+        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
+    },
+    {
+        "prenom": "David",
+        "nom": "Gatel",
+        "identifiant": "dagatel",
+        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+        "email": "david.gatel@gmgconstruction.com",
+        "fonction": "Directeur du pôle exploitation",
+        "groupe": ["direction"],
+        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
+    },
+    {
+        "prenom": "François-Regis",
+        "nom": "Menguy",
+        "identifiant": "frmenguy",
+        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+        "email": "françois-regis.menguy@gmgconstruction.com",
+        "fonction": "Directeur du pôle système",
+        "groupe": ["directeur"],
+        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
+    },
+    {
+        "prenom": "Aloïs",
+        "nom": "Guitton",
+        "identifiant": "alguitton",
+        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+        "email": "aloïs.guitton@gmgconstruction.com",
+        "fonction": "Directeur de la communication digital",
+        "groupe": ["direction"],
+        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -46,12 +49,9 @@
         "identifiant": "lodupont",
         "motdepasse": "$2y$10$OmcvmAUICwiYFJk6Kh15FeqybC2B7wpJQXyb6gSmPxsoGBCIAhWq6",
         "email": "louis.dupont@gmgconstruction.com",
-        "fonction": "Administrateur des Syst\u00e8mes d'Information",
-        "groupe": [
-            "salari\u00e9s",
-            "admin"
-        ],
-        "photo": ".\/img\/entreprise\/louis_dupont.jpeg",
+        "fonction": "Administrateur des Systèmes d'Information",
+        "groupe": ["salariés","admin"],
+        "photo": "./img/entreprise/louis_dupont.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -60,12 +60,9 @@
         "identifiant": "lodurand",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "louise.durand@gmgconstruction.com",
-        "fonction": "Comptable Chef d'\u00c9quipe",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/louise_durand.jpeg",
+        "fonction": "Comptable Chef d'équipe",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/louise_durand.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -74,11 +71,9 @@
         "identifiant": "malefebvre",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "marc.lefebvre@gmgconstruction.com",
-        "fonction": "Ing\u00e9nieur Structure",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/marc_lefebvre.jpeg",
+        "fonction": "Ingénieur Structure",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/marc_lefebvre.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -87,12 +82,9 @@
         "identifiant": "sodubois",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "sophie.dubois@gmgconstruction.com",
-        "fonction": "Chef de Projet B\u00e2timent",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/sophie_dubois.jpeg",
+        "fonction": "Chef de Projet Bâtiment",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/sophie_dubois.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -102,24 +94,19 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "pierre.martin@gmgconstruction.com",
         "fonction": "Dessinateur Projeteur CVC",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/pierre_martin.jpeg",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/pierre_martin.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
-        "prenom": "Chlo\u00e9",
+        "prenom": "Chloé",
         "nom": "Bernard",
         "identifiant": "chbernard",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
-        "email": "chloe.bernard@gmgconstruction.com",
+        "email": "chloé.bernard@gmgconstruction.com",
         "fonction": "Responsable des Ressources Humaines",
-        "groupe": [
-            "managers",
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/chloe_bernard.jpeg",
+        "groupe": ["managers","salariés"],
+        "photo": "./img/entreprise/chloe_bernard.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -129,10 +116,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "thomas.petit@gmgconstruction.com",
         "fonction": "Technicien de Chantier",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/thomas_petit.jpeg",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/thomas_petit.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -142,10 +127,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "manon.roux@gmgconstruction.com",
         "fonction": "Assistante de Direction",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/manon_roux.jpeg",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/manon_roux.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -155,10 +138,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "antoine.garcia@gmgconstruction.com",
         "fonction": "Directeur Commercial",
-        "groupe": [
-            "direction"
-        ],
-        "photo": ".\/img\/entreprise\/antoine_garcia.jpeg",
+        "groupe": ["direction"],
+        "photo": "./img/entreprise/antoine_garcia.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -168,10 +149,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "camille.david@gmgconstruction.com",
         "fonction": "Architecte",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/camille_david.jpeg",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/camille_david.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -181,11 +160,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "nicolas.moreau@gmgconstruction.com",
         "fonction": "Conducteur de Travaux Principal",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/nicolas_moreau.jpeg",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/nicolas_moreau.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -195,11 +171,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "laura.fournier@gmgconstruction.com",
         "fonction": "Responsable Marketing & Communication",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/laura_fournier.jpeg",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/laura_fournier.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -208,12 +181,9 @@
         "identifiant": "roleroy",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "romain.leroy@gmgconstruction.com",
-        "fonction": "Responsable Achats Mat\u00e9riaux",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/romain_leroy.jpeg",
+        "fonction": "Responsable Achats Matériaux",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/romain_leroy.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -223,10 +193,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "clara.lambert@gmgconstruction.com",
         "fonction": "Juriste Contrats & Affaires",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/clara_lambert.jpeg",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/clara_lambert.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -236,10 +204,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "alexandre.dupuis@gmgconstruction.com",
         "fonction": "Directeur Financier",
-        "groupe": [
-            "direction"
-        ],
-        "photo": ".\/img\/entreprise\/alexandre_dupuis.jpeg",
+        "groupe": ["manager","salariés"],
+        "photo": "./img/entreprise/alexandre_dupuis.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -249,10 +215,8 @@
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "elodie.bonnet@gmgconstruction.com",
         "fonction": "Aide-Comptable",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/elodie_bonnet.jpeg",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/elodie_bonnet.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -261,11 +225,9 @@
         "identifiant": "jugirard",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "julien.girard@gmgconstruction.com",
-        "fonction": "Technicien G\u00e9om\u00e8tre-Topographe",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/julien_girard.jpeg",
+        "fonction": "Technicien Géomètre-Topographe",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/julien_girard.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -274,12 +236,9 @@
         "identifiant": "faroger",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "fanny.roger@gmgconstruction.com",
-        "fonction": "Responsable Qualit\u00e9 & S\u00e9curit\u00e9",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/fanny_roger.jpeg",
+        "fonction": "Responsable Qualité & Sécurité",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/fanny_roger.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -288,11 +247,9 @@
         "identifiant": "viandre",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "vincent.andre@gmgconstruction.com",
-        "fonction": "Ing\u00e9nieur \u00c9tudes de Prix",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/vincent_andre.jpeg",
+        "fonction": "Ingénieur études de Prix",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/vincent_andre.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -301,12 +258,9 @@
         "identifiant": "majacquet",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "mathilde.jacquet@gmgconstruction.com",
-        "fonction": "Responsable Bureau d'\u00c9tudes",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/mathilde_jacquet.jpeg",
+        "fonction": "Responsable Bureau d'études",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/mathilde_jacquet.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -315,25 +269,20 @@
         "identifiant": "oldurand",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "olivier.durand@gmgconstruction.com",
-        "fonction": "Chef d'\u00c9quipe Ma\u00e7onnerie",
-        "groupe": [
-            "salari\u00e9s",
-            "managers"
-        ],
-        "photo": ".\/img\/entreprise\/olivier_durand.jpeg",
+        "fonction": "Chef d'équipe Maçonnerie",
+        "groupe": ["salariés","managers"],
+        "photo": "./img/entreprise/olivier_durand.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
-        "prenom": "L\u00e9a",
+        "prenom": "Léa",
         "nom": "Morel",
-        "identifiant": "lemorel",
+        "identifiant": "lémorel",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
-        "email": "lea.morel@gmgconstruction.com",
-        "fonction": "Charg\u00e9e de Recrutement",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/lea_morel.jpeg",
+        "email": "léa.morel@gmgconstruction.com",
+        "fonction": "Chargée de Recrutement",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/lea_morel.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -342,11 +291,9 @@
         "identifiant": "kedubois",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "kevin.dubois@gmgconstruction.com",
-        "fonction": "Apprenti \u00c9lectricien",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/kevin_dubois.jpeg",
+        "fonction": "Apprenti électricien",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/kevin_dubois.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -355,24 +302,42 @@
         "identifiant": "fabenali",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
         "email": "fatima.benali@gmgconstruction.com",
-        "fonction": "Secr\u00e9taire de Chantier",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/fatima_benali.jpeg",
+        "fonction": "Secrétaire de Chantier",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/fatima_benali.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
-        "prenom": "Jos\u00e9",
+        "prenom": "José",
         "nom": "Ramos",
         "identifiant": "joramos",
         "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
-        "email": "jose.ramos@gmgconstruction.com",
-        "fonction": "Ouvrier Sp\u00e9cialis\u00e9 BTP",
-        "groupe": [
-            "salari\u00e9s"
-        ],
-        "photo": ".\/img\/entreprise\/jose_ramos.jpeg",
+        "email": "josé.ramos@gmgconstruction.com",
+        "fonction": "Ouvrier Spécialisé BTP",
+        "groupe": ["salariés"],
+        "photo": "./img/entreprise/jose_ramos.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
+    },
+    {
+        "prenom": "user",
+        "nom": "user",
+        "identifiant": "ususer",
+        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+        "email": "user.user@gmgconstruction.com",
+        "fonction": "user",
+        "groupe": ["managers","salariés"],
+        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
+    },
+    {
+        "prenom": "admin",
+        "nom": "admin",
+        "identifiant": "adadmin",
+        "motdepasse": "$2y$10$hkJQ8VjDbtGhT6QMD3mSuOtVNB2XN7SzSz.3LwYdPY1DCZY.qGFpu",
+        "email": "admin.admin@gmgconstruction.com",
+        "fonction": "admin",
+        "groupe": ["admin"],
+        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     }
 ]
