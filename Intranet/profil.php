@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
 error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 if (!isset($_SESSION['identifiant'])) {
     header("Location: portail_connexion.php");
@@ -13,7 +13,6 @@ $utilisateurs = [];
 $contenu_fichier = file_get_contents($fichier_utilisateurs);
 $utilisateurs = json_decode($contenu_fichier, true);
 
-// Trouver l'utilisateur actuel
 $identifiant_actuel = $_SESSION['identifiant'];
 $index_utilisateur = -1;
 
@@ -28,6 +27,11 @@ $utilisateur = ['prenom' => '','nom' => '','identifiant' => '','email' => '','fo
 
 if ($index_utilisateur >= 0) {
     $utilisateur = $utilisateurs[$index_utilisateur];
+
+    // Ajout des données dans $_SESSION
+    $_SESSION['prenom'] = $utilisateur['prenom'];
+    $_SESSION['nom'] = $utilisateur['nom'];
+    $_SESSION['fonction'] = $utilisateur['fonction'];
 }
 
 $message = "";
@@ -69,7 +73,11 @@ $identifiant = htmlspecialchars($utilisateur['identifiant']);
 $email = htmlspecialchars($utilisateur['email']);
 $fonction = htmlspecialchars($utilisateur['fonction']);
 $groupes = implode(', ', $utilisateur['groupe']);
+$description = isset($utilisateur['description']) ? htmlspecialchars($utilisateur['description']) : '';
 $annee = date("Y");
+
+
+
 
 echo "
 <!DOCTYPE html>
@@ -105,11 +113,11 @@ echo "
           </li>
         </ul>
         <div class='d-flex align-items-center'>";
-          if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['groupe'])) {
-            echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) ." ". htmlspecialchars($_SESSION['nom']) .", ". implode(", ", $_SESSION['groupe']) ."</span>";
+          if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+            echo "<span class='text-light me-2'>Connecté en tant que ". htmlspecialchars($_SESSION['prenom']) . " ". htmlspecialchars($_SESSION['nom']) . ", ". htmlspecialchars($_SESSION['fonction']). "</span>";
             echo "<a href='./portail_deconnexion.php' class='btn btn-outline-light btn-sm'>Se déconnecter</a>";
           }
-          echo "
+        echo "
         </div>
       </div>
     </div>
@@ -131,9 +139,10 @@ echo "
           <p><strong>Prénom :</strong> $prenom</p>
           <p><strong>Nom :</strong> $nom</p>
           <p><strong>Identifiant :</strong> $identifiant</p>
+          <p><strong>Email :</strong> $email</p>
           <div class='mb-3'>
-            <label for='email' class='form-label'>Email :</label>
-            <input type='email' class='form-control' id='email' name='email' value='$email'>
+            <label for='description' class='form-label'>Description :</label>
+            <textarea type='description' class='form-control' id='description' name='description' rows='5' value='$description'></textarea>
           </div>
           <div class='mb-3'>
             <label for='new_password' class='form-label'>Nouveau mot de passe :</label>
