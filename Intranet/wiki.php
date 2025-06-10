@@ -63,44 +63,135 @@ echo "<!DOCTYPE html>
         </tr>
       </thead>
       <tbody>
+  <tr>
+    <td>Connexion</td>
+    <td>portail_connexion.php</td>
+    <td>Permet aux utilisateurs de se connecter à l’intranet avec leurs identifiants.</td>
+  </tr>
+  <tr>
+    <td>Accueil</td>
+    <td>accueil_intranet.php</td>
+    <td>Page d’accueil après connexion, point de départ vers les autres sections.</td>
+  </tr>
+  <tr>
+    <td>Annuaire</td>
+    <td>annuaire.php</td>
+    <td>Affiche les informations des utilisateurs enregistrés.</td>
+  </tr>
+  <tr>
+    <td>Gestion des fichiers</td>
+    <td>gestion_fichier.php</td>
+    <td>Page prévue pour ajouter ou consulter des fichiers partagés.</td>
+  </tr>
+  <tr>
+    <td>Wiki</td>
+    <td>wiki.php</td>
+    <td>Page actuelle contenant la documentation et l’explication des fichiers utilisés.</td>
+  </tr>
+  <tr>
+    <td>Déconnexion</td>
+    <td>portail_deconnexion.php</td>
+    <td>Termine la session utilisateur et redirige vers la page de connexion.</td>
+  </tr>
+  <tr>
+    <td>Documentation Apache</td>
+    <td><a href='https://httpd.apache.org/' target='_blank'>httpd.apache.org</a></td>
+    <td>Doc officielle d’Apache HTTP Server, pour configurer et comprendre le serveur web.</td>
+  </tr>
+  <tr>
+    <td>PHP Documentation</td>
+    <td><a href='https://www.php.net/manual/fr/' target='_blank'>php.net</a></td>
+    <td>Référence officielle PHP pour fonctions, syntaxe et bonnes pratiques.</td>
+  </tr>
+  <tr>
+    <td>Bootstrap Docs</td>
+    <td><a href='https://getbootstrap.com/docs/5.3/' target='_blank'>getbootstrap.com</a></td>
+    <td>Docs Bootstrap 5.3, utilisée pour styliser et structurer l’interface.</td>
+  </tr>
+  <tr>
+    <td>W3Schools</td>
+    <td><a href='https://www.w3schools.com/' target='_blank'>w3schools.com</a></td>
+    <td>Site d’apprentissage web (HTML, CSS, JS, PHP), idéal pour bases et références rapides.</td>
+  </tr>
+  <tr>
+    <td>MDN Web Docs</td>
+    <td><a href='https://developer.mozilla.org/fr/' target='_blank'>developer.mozilla.org</a></td>
+    <td>Documentation complète HTML, CSS, JS et technologies web.</td>
+  </tr>
+  <tr>
+    <td>Stack Overflow</td>
+    <td><a href='https://stackoverflow.com' target='_blank'>stackoverflow.com</a></td>
+    <td>Site d’entraide pour développeurs, utile pour résoudre des problèmes et trouver des exemples.</td>
+  </tr>
+  <tr>
+    <td>Documentation MySQL</td>
+    <td><a href='https://dev.mysql.com/doc/' target='_blank'>dev.mysql.com/doc/</a></td>
+    <td>Doc officielle MySQL : syntaxe SQL et administration des bases.</td>
+  </tr>
+  <tr>
+    <td>phpMyAdmin</td>
+    <td><a href='https://www.phpmyadmin.net/' target='_blank'>phpmyadmin.net</a></td>
+    <td>Interface web pour gérer facilement une base MySQL.</td>
+  </tr>
+  <tr>
+    <td>CyberChef</td>
+    <td><a href='https://gchq.github.io/CyberChef/' target='_blank'>gchq.github.io/CyberChef/</a></td>
+    <td>Outil en ligne pour encoder, décoder, hasher et déboguer des chaînes.</td>
+  </tr>
+  <tr>
+    <td>Regex101</td>
+    <td><a href='https://regex101.com/' target='_blank'>regex101.com</a></td>
+    <td>Test et débogage interactif d’expressions régulières (RegEx).</td>
+  </tr>
+  <tr>
+    <td>Draw.io</td>
+    <td><a href='https://app.diagrams.net/' target='_blank'>app.diagrams.net</a></td>
+    <td>Outil de création de diagrammes UML, BDD, architecture.</td>
+  </tr>
+</tbody>
+
+    </table>
+  </div>
+  <h3 class='mt-5'>Identifiants de test (mdp nécessaires)</h3>
+  <div class='table-responsive'>
+    <table class='table table-bordered table-hover'>
+      <thead class='table-dark'>
         <tr>
-          <td>Connexion</td>
-          <td>portail_connexion.php</td>
-          <td>Permet aux utilisateurs de se connecter à l’intranet avec leurs identifiants.</td>
+          <th>Nom</th>
+          <th>Identifiant</th>
+          <th>Mot de passe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>David GATEL</td>
+          <td>dagatel</td>
+          <td>bonjour</td>
         </tr>
         <tr>
-          <td>Accueil</td>
-          <td>accueil_intranet.php</td>
-          <td>Page d’accueil après connexion, point de départ vers les autres sections.</td>
+          <td>François-Régis Menguy</td>
+          <td>frmenguy</td>
+          <td>bonjour</td>
         </tr>
         <tr>
-          <td>Annuaire</td>
-          <td>annuaire.php</td>
-          <td>Affiche les informations des utilisateurs enregistrés.</td>
+          <td>Aloïs Guitton</td>
+          <td>alguitton</td>
+          <td>bonjour</td>
         </tr>
         <tr>
-          <td>Gestion des fichiers</td>
-          <td>gestion_fichier.php</td>
-          <td>Page prévue pour ajouter ou consulter des fichiers partagés.</td>
+          <td>user user</td>
+          <td>ususer</td>
+          <td>bonjour</td>
         </tr>
         <tr>
-          <td>Wiki</td>
-          <td>wiki.php</td>
-          <td>Page actuelle contenant la documentation et l’explication des fichiers utilisés.</td>
-        </tr>
-        <tr>
-          <td>Déconnexion</td>
-          <td>portail_deconnexion.php</td>
-          <td>Termine la session utilisateur et redirige vers la page de connexion.</td>
-        </tr>
-        <tr>
-          <td>Stack Overflow</td>
-          <td><a href='https://stackoverflow.com' target='_blank'>stackoverflow.com</a></td>
-          <td>Site d’entraide pour développeurs utilisé pour résoudre des problèmes de code, trouver des exemples ou comprendre des erreurs.</td> // ajoutez doc apache https://httpd.apache.org/
+          <td>admin admin</td>
+          <td>adadmin</td>
+          <td>bonjour</td>
         </tr>
       </tbody>
     </table>
   </div>
+</section>
 </section>
 
 <footer class='bg-dark text-white text-center py-3'>
