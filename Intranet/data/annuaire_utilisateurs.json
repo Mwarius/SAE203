@@ -18,7 +18,7 @@
         "email": "david.gatel@gmgconstruction.com",
         "fonction": "Directeur du pôle exploitation",
         "groupe": ["direction"],
-        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "photo": "./img/entreprise/david_gatel.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -29,7 +29,7 @@
         "email": "françois-regis.menguy@gmgconstruction.com",
         "fonction": "Directeur du pôle système",
         "groupe": ["directeur"],
-        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "photo": "./img/entreprise/francois-regis_menguy.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
@@ -40,7 +40,7 @@
         "email": "aloïs.guitton@gmgconstruction.com",
         "fonction": "Directeur de la communication digital",
         "groupe": ["direction"],
-        "photo": "./img/entreprise/jaqueline_dupond.jpeg",
+        "photo": "./img/entreprise/alois_guitton.jpeg",
         "description":"blah blah blah bleh bleh bleh bluh bluh bluh"
     },
     {
