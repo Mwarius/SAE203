@@ -76,9 +76,6 @@ $groupes = implode(', ', $utilisateur['groupe']);
 $description = isset($utilisateur['description']) ? htmlspecialchars($utilisateur['description']) : '';
 $annee = date("Y");
 
-
-
-
 echo "
 <!DOCTYPE html>
 <html lang='fr'>
