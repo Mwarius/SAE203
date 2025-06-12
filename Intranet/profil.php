@@ -21,13 +21,6 @@ foreach ($utilisateurs as $i => $u) {
     }
 }
 
-// stock certaines infos de sessions
-if ($utilisateur) {
-    $_SESSION['prenom'] = $utilisateur['prenom'];
-    $_SESSION['nom'] = $utilisateur['nom'];
-    $_SESSION['fonction'] = $utilisateur['fonction'];
-}
-
 $message = "";
 
 // Traitement du formulaire
