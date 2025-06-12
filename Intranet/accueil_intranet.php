@@ -4,11 +4,7 @@ if (!isset($_SESSION['prenom'])){
   header("Location:portail_connexion.php");
   exit;
 }
-if ($utilisateur) {
-    $_SESSION['prenom'] = $utilisateur['prenom'];
-    $_SESSION['nom'] = $utilisateur['nom'];
-    $_SESSION['fonction'] = $utilisateur['fonction'];
-}
+
 echo "<!DOCTYPE html>
 <html lang='fr'>
 <head>
