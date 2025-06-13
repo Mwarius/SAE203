@@ -26,7 +26,7 @@ page_load();
                         <div class="col-md-4">
                             <select name="uploadFolder" class="form-select" required>
                                 <?php
-                                $dossierBase = "Storage"; // Définit le dossier de base où sont stockés tous les sous-dossiers accessibles via l'interface.
+                                $dossierBase = "/var/www/Storage"; // Définit le dossier de base où sont stockés tous les sous-dossiers accessibles via l'interface.
                                 $dossiers = scandir($dossierBase); // Récupère tous les fichiers et dossiers contenus dans "Storage" (renvoie aussi '.' et '..').
 
                                 $groupesUtilisateur = $_SESSION['groupe']; // Récupère les groupes de l'utilisateur connecté (ou tableau vide si non défini).
@@ -45,9 +45,9 @@ page_load();
                                     // - OU il appartient au groupe correspondant au nom du dossier
                                     $autoriseVoir = $isAdmin || !$estDossierRestreint || in_array($dossier, $groupesUtilisateur);
                                 
-                                    if (!$autoriseVoir) continue; // Si l'utilisateur n'est pas autorisé à voir ce dossier, on passe au suivant.     
-                                    // Affiche une option dans le <select> avec le nom du dossier (échappé pour la sécurité HTML).
-                                    echo "<option value=\"" . htmlspecialchars($dossier) . "\" $selected>" . htmlspecialchars($dossier) . "</option>";
+                                    if (!$autoriseVoir) continue; // Si l'utilisateur n'est pas autorisé à voir ce dossier, on passe au suivant.
+                                    // Affiche une option dans le <select> avec le nom du dossier.
+                                    echo "<option value=\"" . htmlspecialchars($dossier) . "\" >" . htmlspecialchars($dossier) . "</option>";
                                 }
                                 ?>
                             </select>
@@ -80,7 +80,7 @@ page_load();
                 <h5 class="card-title">📂 Fichiers disponibles</h5>
                 <?php
                 $isAdmin = isset($_SESSION['groupe']) && in_array("admin", $_SESSION['groupe']);
-                afficherFichiers("Storage");   
+                afficherFichiers("/var/www/Storage/");   
                 ?>
                 </ul>
             </div>
