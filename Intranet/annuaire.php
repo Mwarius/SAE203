@@ -4,7 +4,11 @@ if (!isset($_SESSION['prenom'])){
   header("Location:portail_connexion.php");
   exit;
 }
-
+if (isset($utilisateur)) {
+    $_SESSION['prenom'] = $utilisateur['prenom'];
+    $_SESSION['nom'] = $utilisateur['nom'];
+    $_SESSION['fonction'] = $utilisateur['fonction'];
+}
 echo "<!DOCTYPE html>
 <html lang='fr'>
 <head>
@@ -61,11 +65,19 @@ echo "<!DOCTYPE html>
       <td><input type='submit' name='clients' class='border-primary text-primary bg-white' value='Clients'><td>
     </tr>
   </table>
-</form>;
-<section class='flex-grow-1 d-flex justify-content-center align-items-center'>";
-  
+</form>";  
 
+
+//Annuaire utilisateurs
 if (isset($_POST['utilisateurs'])){
+  if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+    if (in_array('admin', $_SESSION['groupe'])){
+      echo "<form method = 'post' class='text-center'>
+        <h2><input type='submit' name='ajoutUser' class='bg-primary text-white border-primary' value='+'></h2>
+      </form>";
+    }
+  }
+  echo "<section class='flex-grow-1 d-flex justify-content-center align-items-center'>";
   echo "<table>";
   $compteurTable = 1;
   $jsonUser = json_decode(file_get_contents("data/annuaire_utilisateurs.json"));
@@ -75,8 +87,11 @@ if (isset($_POST['utilisateurs'])){
       };
       $userActuel = (array)($jsonUser[$i]);
       echo "<td>
-        <div class='card border-black' style='border-radius: 10px;height:500px'>
-        <div class='card-header bg-primary text-white' style='border-radius: 8px'><h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
+        <div class='card border-black' style='border-radius: 10px;height:530px'>
+        <div class='card-header bg-primary text-white' style='border-radius: 8px'>";
+        
+        echo"
+        <h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
         <div class='card-body'><img src=".$userActuel["photo"]." alt='User $i' style='width: 350px'><p> ".$userActuel['description']." </p>
         <div class='card-footer text-secondary'><p> ".$userActuel["fonction"]." </p>
       </td>";
@@ -88,9 +103,20 @@ if (isset($_POST['utilisateurs'])){
         $compteurTable+= 1;
       }
     }
-  echo "</table>";
+    echo "</table>";
 }
+
+
+//Annuaire partenaires
 elseif (isset($_POST['partenaires'])){
+  if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+  if (in_array('admin', $_SESSION['groupe'])){
+    echo "<form method = 'post' class='text-center'>
+      <h2><input type='submit' name='ajoutPart' class='bg-primary text-white border-primary' value='+'></h2>
+    </form>";
+  }
+}
+  echo "<section class='flex-grow-1 d-flex justify-content-center align-items-center'>";
   echo "<table>";
   $compteurTable = 1;
   $jsonPart = json_decode(file_get_contents("data/annuaire_partenaire.json"));
@@ -114,7 +140,17 @@ elseif (isset($_POST['partenaires'])){
     }
   echo "</table>";
 }
+
+//Annuaire clients
 elseif (isset($_POST['clients'])){
+  if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+  if (in_array('admin', $_SESSION['groupe'])){
+    echo "<form method = 'post' class='text-center'>
+      <h2><input type='submit' name='ajoutClient' class='bg-primary text-white border-primary' value='+'></h2>
+    </form>";
+  }
+}
+  echo "<section class='flex-grow-1 d-flex justify-content-center align-items-center'>";
   echo "<table>";
   $compteurTable = 1;
   $jsonClient = json_decode(file_get_contents("data/annuaire_clients.json"));
@@ -138,7 +174,133 @@ elseif (isset($_POST['clients'])){
     }
   echo "</table>";
 }
+
+//Formulaire ajout utilisateurs
+elseif (isset($_POST['ajoutUser'])){
+  echo "<br>";
+  echo "<form action='scripts\ajoutUser.php' method='post'>
+    <div class='container' style='max-width: 400px;'>
+    <h2>Ajout d'un utilisateur</h2>
+      <div class='form-group mb-3'>
+        <label>Nom</label>
+        <input type='text' class='form-control' name='nom' placeholder='Nom' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Prénom</label>
+        <input type='text' class='form-control' name='prenom' placeholder='Prénom' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Mot de passe</label>
+        <input type='text' class='form-control' name='mdp' placeholder='MotDePasse' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Mail</label>
+        <input type='email' class='form-control' name='mail' placeholder='Mail' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Image</label>
+        <input type='text' class='form-control' name='image' placeholder='Image' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Fonction</label>
+        <input type='text' class='form-control' name='fonction' placeholder='fonction' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Description</label>
+        <input type='text' class='form-control' name='desc' placeholder='Description' required>
+      </div>
+      <div class='form-group mb-3'>
+        <input type='checkbox' id='directeur' name='directeur' value='directeur'>
+        <label for='directeur'>Directeur</label>
+        <input type='checkbox' id='direction' name='direction' value='direction'>
+        <label for='direction'>Direction</label><br>
+        <input type='checkbox' id='salaries' name='salaries' value='salaries'>
+        <label for='salaries'>Salariés</label>
+        <input type='checkbox' id='admin' name='admin' value='admin'>
+        <label for='admin'>Admin</label><br>
+        <input type='checkbox' id='managers' name='managers' value='managers'>
+        <label for='managers'>Managers</label>
+      </div>
+      <button type='submit' class='btn btn-primary w-100'>Ajouter à l'annuaire</button>
+      <p class='text-danger text-center mt-3'>Veuillez remplir tous les champs</p>
+    </form>
+  </div>";
+}
+
+//Formulaire ajout partenaire
+elseif (isset($_POST['ajoutPart'])){
+  echo "<br>";
+  echo "<form action='scripts\ajoutPart.php' method='post'>
+    <div class='container' style='max-width: 400px;'>
+    <h2>Ajout d'un partenaire</h2>
+      <div class='form-group mb-3'>
+        <label>Nom</label>
+        <input type='text' class='form-control' name='nom' placeholder='Nom' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Logo</label>
+        <input type='text' class='form-control' name='logo' placeholder='logo' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Description</label>
+        <input type='text' class='form-control' name='desc' placeholder='Description' required>
+      </div>
+      <button type='submit' class='btn btn-primary w-100'>Ajouter à l'annuaire</button>
+      <p class='text-danger text-center mt-3'>Veuillez remplir tous les champs</p>
+    </form>
+  </div>";
+}
+
+//Formulaire ajout client
+elseif (isset($_POST['ajoutClient'])){
+  echo "<br>";
+  echo "<form action='scripts\ajoutClient.php' method='post'>
+    <div class='container' style='max-width: 400px;'>
+    <h2>Ajout d'un client</h2>
+      <div class='form-group mb-3'>
+        <label>ID</label>
+        <input type='text' class='form-control' name='id_client' placeholder='id_client' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Nom</label>
+        <input type='text' class='form-control' name='nom_client' placeholder='nom_client' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Numéro de téléphone</label>
+        <input type='text' class='form-control' name='telephone' placeholder='telephone' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Email</label>
+        <input type='text' class='form-control' name='email' placeholder='email' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Adresse</label>
+        <input type='text' class='form-control' name='adresse' placeholder='adresse' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Projet</label>
+        <input type='text' class='form-control' name='projet' placeholder='projet' required>
+      </div>
+      <div class='form-group mb-3'>
+        <label>Statut</label>
+        <input type='text' class='form-control' name='statut' placeholder='statut' required>
+      </div>
+      <button type='submit' class='btn btn-primary w-100'>Ajouter à l'annuaire</button>
+      <p class='text-danger text-center mt-3'>Veuillez remplir tous les champs</p>
+    </form>
+  </div>";
+}
+
+//L'annuaire par défaut est celui des utilisateurs
 else{
+  if (isset($_SESSION['prenom']) && isset($_SESSION['nom']) && isset($_SESSION['fonction'])) {
+  if (in_array('admin', $_SESSION['groupe'])){
+    echo "<form method = 'post' class='text-center'>
+      <h2><input type='submit' name='ajoutUser' class='bg-primary text-white border-primary' value='+'></h2>
+    </form>";
+  }
+}
+  echo "<section class='flex-grow-1 d-flex justify-content-center align-items-center'>";
   echo "<table>";
   $compteurTable = 1;
   $jsonUser = json_decode(file_get_contents("data/annuaire_utilisateurs.json"));
@@ -148,7 +310,7 @@ else{
       };
       $userActuel = (array)($jsonUser[$i]);
       echo "<td>
-        <div class='card border-black' style='border-radius: 10px;height:500px'>
+        <div class='card border-black' style='border-radius: 10px;height:550px'>
         <div class='card-header bg-primary text-white' style='border-radius: 8px'><h1> ".$userActuel["prenom"]." ".$userActuel["nom"]." </h1></div>
         <div class='card-body'><img src=".$userActuel["photo"]." alt='User $i' style='width: 350px'><p> ".$userActuel['description']." </p>
         <div class='card-footer text-secondary'><p> ".$userActuel["fonction"]." </p>
