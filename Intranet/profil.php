@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $utilisateur) {
             $utilisateurs[$index]['motdepasse'] = password_hash($mdp1, PASSWORD_DEFAULT);
         }
         
-        $utilisateurs[$index]['description'] = $description; // mets à jour la description
+        $utilisateurs[$index]['description'] = htmlspecialchars($desc); // mets à jour la description
 
         // sauvegarde les informations dans le fichier
         if (file_put_contents($fichier, json_encode($utilisateurs, JSON_PRETTY_PRINT))) {
