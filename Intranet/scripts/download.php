@@ -1,6 +1,6 @@
 <?php
 $filename = $_GET['file'];
-$filepath = "/var/www/Storage/" . $filename;
+$filepath = "../" . $filename;
 
 if (file_exists($filepath)) {
     header('Content-Description: File Transfer');
