@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$targetDir = '../Storage/';
+$targetDir = '/var/www/Storage/';
 $uploadFolder = isset($_POST['uploadFolder']) ? basename($_POST['uploadFolder']) : 'transfert';
 
 // Sécurisation
@@ -17,7 +17,7 @@ $targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 
 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
-    header("Location: ../gestion_fichier.php");
+    header("Location: /var/www/html/SAE203/Intranet/gestion_fichier.php");
     exit;
 } else {
     echo "Erreur lors de l’upload du fichier.";
