@@ -3,13 +3,13 @@ session_start();
 
 // Vérifier que le dossier est spécifié
 if (!isset($_GET['folder'])) {
-    header("Location: ../index.php");
+    header("Location: /var/www/html/index.html");
     exit;
 }
 
 // Sécuriser le nom du dossier (évite les chemins relatifs)
 $folder = basename($_GET['folder']);
-$basePath = realpath('../Storage'); // dossier racine complet
+$basePath = realpath('/var/www/Storage/'); // dossier racine complet
 $fullPath = realpath("$basePath/$folder"); //chemin complet
 
 // Vérification que le chemin est bien dans Storage
@@ -47,4 +47,3 @@ header('Content-Length: ' . filesize($tmpZip));
 readfile($tmpZip);
 unlink($tmpZip);
 exit;
-?>
